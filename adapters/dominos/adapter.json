@@ -1,0 +1,59 @@
+{
+  "id": "dominos",
+  "name": "Domino's",
+  "version": "0.2.0",
+  "description": "Draft adapter that reads the active Domino's store menu and deals, builds configured products, adds products or deals to the current cart without checkout, and opens or closes the cart overlay.",
+  "matches": ["https://www.dominos.com/*"],
+  "world": "USER_SCRIPT",
+  "compatibility": {
+    "routes": ["/", "/menu", "/deals"],
+    "lastVerified": "2026-09-03"
+  },
+  "tools": [
+    {
+      "name": "list_dominos_menu_categories",
+      "description": "List menu categories available at the currently selected Domino's store.",
+      "risk": "read-only"
+    },
+    {
+      "name": "get_dominos_category",
+      "description": "Return products, base prices, and stable product codes for one menu category at the selected store.",
+      "risk": "read-only"
+    },
+    {
+      "name": "get_dominos_product_options",
+      "description": "Return valid bases, sizes, option groups, toppings, portions, and side choices for a product configuration.",
+      "risk": "read-only"
+    },
+    {
+      "name": "list_dominos_deals",
+      "description": "List current local and national deals for the selected store and service method.",
+      "risk": "read-only"
+    },
+    {
+      "name": "get_dominos_cart",
+      "description": "Return a sanitized summary of the current Domino's cart, including items, deals, and totals.",
+      "risk": "read-only"
+    },
+    {
+      "name": "start_dominos_deal",
+      "description": "Add a currently available deal to the cart so its product slots can be filled.",
+      "risk": "reversible"
+    },
+    {
+      "name": "add_dominos_product_to_cart",
+      "description": "Validate and add one configured product to the current cart, optionally into an active deal.",
+      "risk": "reversible"
+    },
+    {
+      "name": "open_dominos_cart",
+      "description": "Open the Domino's cart overlay on the current page to display items and order summary to the user.",
+      "risk": "read-only"
+    },
+    {
+      "name": "close_dominos_cart",
+      "description": "Close the Domino's cart overlay if it is currently open on the page.",
+      "risk": "read-only"
+    }
+  ]
+}

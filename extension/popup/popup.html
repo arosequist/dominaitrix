@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dominaitrix</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <header>
+      <img src="../assets/dominaitrix-mark.png" alt="" width="38" height="38">
+      <div>
+        <h1>Dominaitrix</h1>
+        <p id="site">Checking this page…</p>
+      </div>
+    </header>
+    <main>
+      <p id="notice" class="notice" hidden></p>
+      <section aria-labelledby="available-heading">
+        <h2 id="available-heading">Supported here</h2>
+        <div id="adapters" class="adapter-list"></div>
+      </section>
+      <section aria-labelledby="health-heading">
+        <div class="section-heading">
+          <h2 id="health-heading">Recent health</h2>
+          <button id="export" class="text-button" type="button">Export</button>
+        </div>
+        <p id="health" class="muted">No adapter events recorded.</p>
+      </section>
+    </main>
+    <footer>
+      <button id="update" class="secondary" type="button">Check for updates</button>
+      <button id="settings" class="secondary" type="button">Settings</button>
+    </footer>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

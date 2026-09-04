@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create Dominaitrix Adapter"
+  short_description: "Build and validate a curated WebMCP site adapter"
+  default_prompt: "Create or update a Dominaitrix WebMCP adapter for the requested website."

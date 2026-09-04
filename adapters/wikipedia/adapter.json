@@ -1,0 +1,34 @@
+{
+  "id": "wikipedia",
+  "name": "Wikipedia",
+  "version": "0.1.0",
+  "description": "Reads article summaries and outlines, extracts sections, and searches the current Wikipedia language edition.",
+  "matches": ["https://*.wikipedia.org/wiki/*"],
+  "world": "USER_SCRIPT",
+  "compatibility": {
+    "routes": ["/wiki/*"],
+    "lastVerified": "2026-09-03"
+  },
+  "tools": [
+    {
+      "name": "get_wikipedia_article_overview",
+      "description": "Return the current article's title, description, lead paragraphs, language, and canonical URL.",
+      "risk": "read-only"
+    },
+    {
+      "name": "get_wikipedia_article_outline",
+      "description": "Return the current article's section hierarchy and stable section IDs.",
+      "risk": "read-only"
+    },
+    {
+      "name": "get_wikipedia_section",
+      "description": "Return the visible text for one section of the current article.",
+      "risk": "read-only"
+    },
+    {
+      "name": "search_wikipedia",
+      "description": "Search the current Wikipedia language edition and return matching article titles and snippets.",
+      "risk": "read-only"
+    }
+  ]
+}

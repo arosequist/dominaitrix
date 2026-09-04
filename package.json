@@ -1,0 +1,18 @@
+{
+  "name": "dominaitrix",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.15.1",
+  "scripts": {
+    "build": "node scripts/build-registry.mjs",
+    "check": "node scripts/check-project.mjs && node --test",
+    "test": "node --test",
+    "registry:build": "node scripts/build-registry.mjs",
+    "registry:check": "node scripts/build-registry.mjs --check",
+    "registry:publish": "node scripts/publish-registry.mjs"
+  },
+  "devDependencies": {
+    "linkedom": "^0.18.13"
+  }
+}

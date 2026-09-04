@@ -1,0 +1,13 @@
+{
+  "id": "replace-me",
+  "name": "Replace me",
+  "version": "0.1.0",
+  "description": "Replace with a precise description of the site capability.",
+  "matches": ["https://example.invalid/*"],
+  "world": "USER_SCRIPT",
+  "compatibility": {
+    "routes": [],
+    "lastVerified": "YYYY-MM-DD"
+  },
+  "tools": []
+}

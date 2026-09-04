@@ -1,0 +1,24 @@
+{
+  "id": "hacker-news",
+  "name": "Hacker News",
+  "version": "0.1.0",
+  "description": "Reads ranked story lists and turns discussions into structured comment threads.",
+  "matches": ["https://news.ycombinator.com/*"],
+  "world": "USER_SCRIPT",
+  "compatibility": {
+    "routes": ["/", "/news", "/newest", "/best", "/ask", "/show", "/jobs", "/item"],
+    "lastVerified": "2026-09-03"
+  },
+  "tools": [
+    {
+      "name": "list_hacker_news_stories",
+      "description": "Return structured stories from the current Hacker News listing or discussion page.",
+      "risk": "read-only"
+    },
+    {
+      "name": "get_hacker_news_discussion",
+      "description": "Return a bounded flat representation of the current Hacker News comment tree.",
+      "risk": "read-only"
+    }
+  ]
+}

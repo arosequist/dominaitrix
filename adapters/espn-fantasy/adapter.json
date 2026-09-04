@@ -1,0 +1,49 @@
+{
+  "id": "espn-fantasy",
+  "name": "ESPN Fantasy",
+  "version": "0.2.1",
+  "description": "Reads and operates live ESPN Fantasy Football draft rooms, including player availability, queues, autopick, rosters, and draft selections.",
+  "matches": ["https://fantasy.espn.com/football/draft*"],
+  "world": "USER_SCRIPT",
+  "compatibility": {
+    "routes": ["/football/draft"],
+    "lastVerified": "2026-09-03"
+  },
+  "tools": [
+    {
+      "name": "get_espn_fantasy_draft_state",
+      "description": "Return the current live-draft clock, turn, team, autopick, queue, and roster state.",
+      "risk": "read-only"
+    },
+    {
+      "name": "list_espn_fantasy_available_players",
+      "description": "Optionally switch ESPN's position filter, then return the currently rendered available players and stable ESPN player IDs.",
+      "risk": "reversible"
+    },
+    {
+      "name": "list_espn_fantasy_pick_history",
+      "description": "Return completed picks currently loaded in the draft room.",
+      "risk": "read-only"
+    },
+    {
+      "name": "queue_espn_fantasy_player",
+      "description": "Add an available player to the user's draft queue.",
+      "risk": "reversible"
+    },
+    {
+      "name": "remove_espn_fantasy_queued_player",
+      "description": "Remove a player from the user's draft queue.",
+      "risk": "reversible"
+    },
+    {
+      "name": "set_espn_fantasy_autopick",
+      "description": "Enable or disable autopick for the current draft room.",
+      "risk": "reversible"
+    },
+    {
+      "name": "draft_espn_fantasy_player",
+      "description": "Draft a currently rendered player after validating the expected pick number; activate the player's position first when another ESPN position view is selected.",
+      "risk": "consequential"
+    }
+  ]
+}

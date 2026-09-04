@@ -1,0 +1,10 @@
+.DS_Store
+node_modules/
+registry/
+.env
+.env.*
+!.env.example
+.wrangler/
+*.pem
+*.key
+telemetry-export-*.json

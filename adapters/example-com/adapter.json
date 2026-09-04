@@ -1,0 +1,19 @@
+{
+  "id": "example-com",
+  "name": "Example.com smoke test",
+  "version": "0.1.0",
+  "description": "Exposes the visible example page heading for installation testing.",
+  "matches": ["https://example.com/*"],
+  "world": "USER_SCRIPT",
+  "compatibility": {
+    "routes": ["/"],
+    "lastVerified": "2026-09-03"
+  },
+  "tools": [
+    {
+      "name": "inspect_example_page",
+      "description": "Return the visible heading and destination link from the Example Domain page.",
+      "risk": "read-only"
+    }
+  ]
+}

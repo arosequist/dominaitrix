@@ -1,0 +1,77 @@
+:root {
+  color-scheme: dark;
+  font: 13px/1.4 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #f3eee8;
+  background: #111014;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  width: 370px;
+  margin: 0;
+  background: linear-gradient(160deg, #19161d 0%, #111014 55%);
+}
+
+header {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 18px;
+  border-bottom: 1px solid #302a34;
+}
+
+h1, h2, p { margin: 0; }
+h1 { font-size: 17px; letter-spacing: .01em; }
+h2 { font-size: 12px; color: #b9acba; text-transform: uppercase; letter-spacing: .08em; }
+header p { margin-top: 2px; color: #9a909d; max-width: 270px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+main { padding: 4px 18px 16px; }
+section { padding-top: 16px; }
+.adapter-list { display: grid; gap: 8px; margin-top: 9px; }
+
+.adapter {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px 12px;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid #352e3a;
+  border-radius: 10px;
+  background: #1d1921;
+}
+
+.adapter strong { display: block; font-size: 13px; }
+.adapter p { margin-top: 3px; color: #aa9eab; font-size: 12px; }
+.adapter .meta { color: #887d8a; font-size: 11px; }
+.adapter-status { color: #8bd6a8; font-size: 11px; font-weight: 700; }
+.adapter-status--error { color: #ef9a9a; }
+
+button {
+  border: 0;
+  border-radius: 8px;
+  padding: 7px 10px;
+  color: white;
+  background: #d72e5c;
+  font: inherit;
+  font-weight: 650;
+  cursor: pointer;
+}
+button:hover { filter: brightness(1.12); }
+button:disabled { cursor: wait; opacity: .55; }
+.secondary { color: #d8ced9; background: #28222d; }
+.text-button { padding: 0; color: #d94c72; background: transparent; font-weight: 600; }
+
+.section-heading { display: flex; justify-content: space-between; align-items: center; }
+.muted { margin-top: 8px; color: #938895; }
+.notice { margin-top: 12px; padding: 9px 10px; border-radius: 8px; color: #ffd9df; background: #3c1d28; }
+.empty { padding: 12px 0; color: #938895; }
+
+footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 12px 18px;
+  border-top: 1px solid #302a34;
+  background: #141217;
+}

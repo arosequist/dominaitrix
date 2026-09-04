@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dominaitrix settings</title>
+    <link rel="stylesheet" href="options.css">
+  </head>
+  <body>
+    <main>
+      <header>
+        <img src="../assets/dominaitrix-mark.png" alt="" width="48" height="48">
+        <div><h1>Dominaitrix settings</h1><p>Adapter registry updates</p></div>
+      </header>
+      <form id="settings">
+        <section>
+          <h2>Registry</h2>
+          <label for="registry-url">Registry index URL</label>
+          <input id="registry-url" name="registryUrl" type="text" required spellcheck="false">
+          <label class="check"><input name="autoUpdate" type="checkbox"> Check for adapter updates automatically</label>
+        </section>
+        <div class="actions"><span id="status" role="status"></span><button type="submit">Save settings</button></div>
+      </form>
+    </main>
+    <script type="module" src="options.js"></script>
+  </body>
+</html>

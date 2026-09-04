@@ -1,0 +1,36 @@
+name: Adapter request
+description: Request WebMCP tools for a website
+title: "Adapter: "
+labels: ["adapter-request"]
+body:
+  - type: input
+    id: url
+    attributes:
+      label: Website URL
+      description: Provide the narrowest useful starting URL.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why this would be useful
+      description: Describe what an agent could help you accomplish on this website.
+    validations:
+      required: true
+  - type: textarea
+    id: tools
+    attributes:
+      label: Requested tools
+      description: Describe the information or actions the agent should have, including which actions change data.
+    validations:
+      required: true
+  - type: textarea
+    id: access
+    attributes:
+      label: Access requirements
+      description: Note whether an account, subscription, test environment, or time-sensitive workflow is required. Do not include credentials.
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional context
+      description: Include relevant routes, known APIs, or failure cases.
