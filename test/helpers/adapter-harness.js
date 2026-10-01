@@ -13,6 +13,7 @@ export async function loadAdapter(adapterPath, html, options = {}) {
     registerTool: async (tool) => { registered.push(tool); },
   };
   window.postMessage = (message) => messages.push(message);
+  options.setup?.({ document, window });
 
   const sandbox = {
     AbortController,
