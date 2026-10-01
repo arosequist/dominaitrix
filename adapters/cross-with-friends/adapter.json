@@ -1,0 +1,13 @@
+{
+  "id": "cross-with-friends",
+  "name": "Cross with Friends",
+  "version": "0.1.0",
+  "description": "Exposes crossword puzzle game state and solving actions.",
+  "matches": ["https://www.crosswithfriends.com/*"],
+  "world": "MAIN",
+  "compatibility": {
+    "routes": ["/"],
+    "lastVerified": "2026-10-01"
+  },
+  "tools": []
+}
