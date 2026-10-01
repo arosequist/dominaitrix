@@ -1,0 +1,22 @@
+{
+  "id": "cross-with-friends",
+  "name": "Cross with Friends",
+  "version": "0.1.0",
+  "description": "Reads crossword games without hidden solutions and operates shared answers, checks, reveals, chat and resets with state guards and server confirmation.",
+  "matches": ["https://www.crosswithfriends.com/game/*", "https://www.crosswithfriends.com/beta/game/*", "https://crosswithfriends.com/game/*", "https://crosswithfriends.com/beta/game/*"],
+  "world": "MAIN",
+  "compatibility": {
+    "routes": ["/game/:gid", "/beta/game/:gid"],
+    "lastVerified": "2026-10-01"
+  },
+  "tools": [
+    { "name": "get_game_state", "description": "Read current entered cells, clues, game metadata, players, timer, selection and recent chat; never return hidden solutions.", "risk": "read-only" },
+    { "name": "set_answer", "description": "Enter a clue answer with crossing conflict protection and server confirmation.", "risk": "reversible" },
+    { "name": "clear_answer", "description": "Clear editable letters of a clue, including shared crossings.", "risk": "reversible" },
+    { "name": "focus_clue", "description": "Select a clue in the local UI without broadcasting a cursor or changing game data.", "risk": "reversible" },
+    { "name": "check", "description": "Apply the site's shared correctness marks to a cell, clue or puzzle.", "risk": "reversible" },
+    { "name": "reveal", "description": "Reveal a cell, clue or puzzle for all players after explicit confirmation.", "risk": "consequential" },
+    { "name": "send_chat_message", "description": "Send a confirmed, non-retractable message to the multiplayer chat.", "risk": "consequential" },
+    { "name": "reset_game", "description": "Reset the unsolved puzzle for all players after explicit confirmation; preserve the timer.", "risk": "consequential" }
+  ]
+}
